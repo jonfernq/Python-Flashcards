@@ -10,8 +10,6 @@ The Python Inquirer package provides a nice CLI for these purposes.
 
 The presentation layer class has limited functionality, only displaying the front and back of flashcards, collecting and validating user input, then passing it on to the logic layer. 
 
-![cli_flashcards](https://user-images.githubusercontent.com/68504324/220826507-665dbd92-35de-4b59-a053-773fa4160106.jpg)
-
 In the logic layer, a simple flashcard state machine class toggles between flashcard front and back, calling the presentation class to present each side of the flashcard, then collecting the user response, which isa self-rating of mastery of the flashcard information.  
 
 Above the flashcard state machine in the logic layer is a a simple iterator class that iterates over a deck of flashcards, calling the flashcard state machine for each  flashcard. 
@@ -25,6 +23,8 @@ Functionality is developed progressively from simple to complex building upon co
 - [inquirer_simple_3.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple_3.py): Simple two part prompt. 
 
 The flashcard display class: 
+
+![cli_flashcards](https://user-images.githubusercontent.com/68504324/220826507-665dbd92-35de-4b59-a053-773fa4160106.jpg)
 
 - [display_flashcard.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/display_flashcard.py): Displays front and back of flashcard, validates user input, and returns response, if required.  
 - [display_flashcard_test.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/display_flashcard_test.py):  Tests display_flashcard.py with example flashcards. 
