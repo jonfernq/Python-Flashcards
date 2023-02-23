@@ -9,10 +9,12 @@ The Python Inquirer package provides a powerful interface to the command line fo
 
 A simple class that uses Inquirer to display the front and back of flashcards and collect user responses.
 
+![cli_flashcards](https://user-images.githubusercontent.com/68504324/220826507-665dbd92-35de-4b59-a053-773fa4160106.jpg)
+
 It is called by a flashcard state machine class that implements each flashcard with the state design pattern
 and a set (or 'deck') of flashcards with the iterator design pattern. 
 
-It is also called by a multiple choice state machine that implements a Coursera-like quiz using the state design pattern.
+A similar class is also called by a multiple choice state machine that implements a Coursera-like quiz using the state design pattern.
 
 - []() 
 
