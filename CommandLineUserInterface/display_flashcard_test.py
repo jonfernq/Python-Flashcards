@@ -2,12 +2,6 @@ from inquirer import Text
 from display_flashcard import DisplayFlashcard
 from display_flashcard import Flashcard
 
-# Define a list of flashcards
-#flashcards = [
-#    {'front': 'What is the capital of France?', 'back': 'Paris'},
-#    {'front': 'What is the largest country in the world?', 'back': 'Russia'}
-#]
-
 flashcards = [
     Flashcard(front='What is the capital of France?', back='Paris'),
     Flashcard(front='What is the largest country in the world?', back='Russia')
