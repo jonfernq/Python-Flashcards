@@ -1,20 +1,26 @@
 ## Command Line User Interface
 
-A command line user interface provides an easy setting to test the logic for user interaction with flashcards 
-and multiple choice quiz questions. 
+An easy setting to test the underlying logic of a flashcard or multiple choice quiz app. 
 
-The Python Inquirer package provides a powerful interface to the command line for these purposes. 
+Then, when the logic is worked out, add a user interface or two, or three. 
 
-### Flashcard Display Class
+The Python Inquirer package provides nice command line interface for these purposes. 
 
-A simple class that uses Inquirer to display the front and back of flashcards and collect user responses.
+### Flashcard Presentation
+
+The presentation layer only collects and validates user input, then passing it on to the logic layer. 
+
+A simple flashcard presentation (or display) class uses Inquirer to display front and back of flashcards and then collect and validate user response.
 
 ![cli_flashcards](https://user-images.githubusercontent.com/68504324/220826507-665dbd92-35de-4b59-a053-773fa4160106.jpg)
 
-It is called by a flashcard state machine class that implements each flashcard with the state design pattern
-and a set (or 'deck') of flashcards with the iterator design pattern. 
+In the logic layer it is a simple flashcard state machine that calls the presentation class to present the front and back of flashcard. 
 
-A similar class is also called by a multiple choice state machine that implements a Coursera-like quiz using the state design pattern.
+A simple iterator class iterates over a deck of flashcards, calling the flashcard state machine for each  flashcard. 
+
+(Note: this same design approach is applied to multiple choice quizzes in iterative mode, but the preferred quiz presentation is a Coursera-like presentation in which all quiz questions are presented on one page with a timer and then grading of feedback after submit.)  
+
+Functionality is not developed progressively from simple to complex building upon code snippets: 
 
 - [inquirer_simple.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple.py): Simple test of Python Inquirer package for command line user input. First, displays a random integer, then continues displaying a different random integer everytime the user hits enter.  
 - [inquirer_simple_2.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple_2.py): Simple test that prompts for user name, then answers 'hello'.  
