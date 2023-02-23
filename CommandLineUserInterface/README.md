@@ -14,6 +14,8 @@ In the logic layer, a simple flashcard state machine class toggles between flash
 
 Above the flashcard state machine in the logic layer is a a simple iterator class that iterates over a deck of flashcards, calling the flashcard state machine for each  flashcard. 
 
+![diagram400](https://user-images.githubusercontent.com/68504324/221042530-fc380752-d65b-4bf5-a5a4-5fe037700d26.jpg)
+
 (Note: this same design approach is applied to multiple choice quizzes in iterative mode, but the preferred quiz presentation is a Coursera-like presentation in which all quiz questions are presented on one page with a timer and then grading of feedback after submit.)  
 
 Functionality is developed progressively from simple to complex building upon code snippets: 
