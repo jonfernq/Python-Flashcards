@@ -69,5 +69,10 @@ flashcard deck CSV files are processed and loaded into the database. In subseque
 any new flashcard deck CSV files are added to the database. 
 
 Each flashcard has four fields added to the database: 'deck name' which is the name of the CSV file,
-card front, card back, and a timestamp.
+card front, card back, and a timestamp:
 
+- [csv2db.py](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/csv2db.py): Creates database and table for CSV file, checking to see if it already exists first, then reading CSV data into it. As simple example and test uses [pali_sentences.csv](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/pali_sentences.csv) 
+
+In this example, the read_csv_file() function reads the CSV file into a list of lists using the csv module. The create_flashcard_table() function then creates a SQLite database file called flashcard_data.db in a sub-directory called flashcard_data, creates a table with the same name as the CSV file (minus the file extension) and with columns named after the CSV headings, and inserts the CSV data into the table.
+
+Note that in this example, the function assumes that the first row of the CSV file contains the column headings. Also, the function assumes that the CSV data has already been validated and cleaned, and does not perform any additional data validation or cleaning.
