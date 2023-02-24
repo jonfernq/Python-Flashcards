@@ -8,17 +8,17 @@ The Python Inquirer package provides a nice CLI for these purposes.
 
 ### Flashcard Presentation
 
-The presentation layer class has limited functionality, only displaying the front and back of flashcards, collecting and validating user input, then passing it on to the logic layer. 
+The presentation layer class has limited functionality, only displaying the front and back of flashcards, collecting and validating user input, then passing it on to the logic layer. It has limited functionality so that the app can be more easily ported and implemented with different user interfaces, e.g. CLI, React.js, PyQT, Flutter, etc...    
 
-In the logic layer, a simple flashcard state machine class toggles between flashcard front and back, calling the presentation class to present each side of the flashcard, then collecting the user response, which isa self-rating of mastery of the flashcard information.  
+In the logic layer, a simple flashcard state machine class toggles between flashcard front and back, calling the presentation class to present each side of the flashcard, then collecting the user response, which is a self-rating of mastery of the flashcard information.  
 
-Above the flashcard state machine in the logic layer is a a simple iterator class that iterates over a deck of flashcards, calling the flashcard state machine for each  flashcard. 
+Above the flashcard state machine in the logic layer is a simple iterator class that iterates over a deck of flashcards, calling the flashcard state machine for each  flashcard. 
 
 ![diagram400](https://user-images.githubusercontent.com/68504324/221042530-fc380752-d65b-4bf5-a5a4-5fe037700d26.jpg)
 
-(Note: this same design approach is applied to multiple choice quizzes in iterative mode, but the preferred quiz presentation is a Coursera-like presentation in which all quiz questions are presented on one page with a timer and then grading of feedback after submit.)  
+(Note: this same design approach is applied to multiple choice quizzes in iterative mode, but the preferred quiz presentation format is a Coursera-like full-page presentation in which all quiz questions are presented on one page with a timer and then grading with feedback after submit.)  
 
-Functionality is developed progressively from simple to complex building upon code snippets: 
+Functionality is developed progressively from simple to complex, building upon code snippets: 
 
 - [inquirer_simple.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple.py): Simple test of Python Inquirer package for command line user input. First, displays a random integer, then continues displaying a different random integer everytime the user hits enter.  
 - [inquirer_simple_2.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple_2.py): Simple test that prompts for user name, then answers 'hello'.  
