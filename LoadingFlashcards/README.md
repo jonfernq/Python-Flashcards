@@ -50,7 +50,18 @@ to achieve different objectives. The raw transaction log allows for flexibility
 and renconfiguration and is non-commital towards eventual app functionalities. 
 
 However, other approaches are possible. For instance, flashcard deck CSV files 
-can be listed in a config file for loading at the beginning of a session.
+can be listed in a config file for loading at the beginning of a session:
+
+- [flashcards_fromconfig.py](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/flashcards_fromconfig.py)
+- [config.json](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/config.json) 
+- Flashcard CSV files: [Academic Word List (AWL)](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/awl_flashcard_1.csv), 
+[Burmese location words](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/burmese_location_words.csv), 
+[City Populations](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/city_populations.csv), 
+[Country Populations](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/country_populations.csv), 
+[Pali Sentences](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/pali_sentences.csv), 
+[Short Russian Words and Letters](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/short_russian_words.csv), 
+[Simple Thai Verbs](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/simple_thai_verbs.csv), 
+[Thai Location Words](https://github.com/jonfernq/Python-Flashcards/blob/main/LoadingFlashcards/thai_location_words.csv). 
 
 The flashcard CSV files in a special CSV file folder can also be automatically loaded
 into a SQLite database by the app. In the first session the database and tables are created and any existing 
