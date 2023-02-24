@@ -2,7 +2,7 @@
 
 The [Leitner system](https://en.wikipedia.org/wiki/Leitner_system) is a method for using flashcards to study. 
 
-"It is a simple implementation of the principle of spaced repetition, where cards are reviewed at increasing intervals... 
+"It is a simple implementation of the principle of [spaced repetition](https://github.com/jonfernq/Python-Flashcards/tree/main/CommandLineUserInterface/LeitnerSystem), where cards are reviewed at increasing intervals... 
 flashcards are sorted into groups according to how well the learner knows each one in Leitner's learning box. 
 The learners try to recall the solution written on a flashcard. If they succeed, they send the card to the next group. 
 If they fail, they send it back to the first group. Each succeeding group has a longer period before the learner 
@@ -12,13 +12,13 @@ is required to revisit the cards." (Source: [Wikipedia](https://en.wikipedia.org
 
 There is no standard way to cycle through the boxes in the Leitner system. However, here are some common approaches:
 
-Fixed order: The simplest approach is to cycle through the boxes in a fixed order, such as starting with box 1 and then moving on to box 2, 3, and 4 in sequence. This ensures that all the flashcards in each box are reviewed before moving on to the next box.
+- **Fixed order**: The simplest approach is to cycle through the boxes in a fixed order, such as starting with box 1 and then moving on to box 2, 3, and 4 in sequence. This ensures that all the flashcards in each box are reviewed before moving on to the next box.
 
-Random order: Another approach is to cycle through the boxes in a random order, which can help prevent users from anticipating which box a flashcard will be in and potentially relying on that knowledge instead of actually learning the material.
+- **Random order**: Another approach is to cycle through the boxes in a random order, which can help prevent users from anticipating which box a flashcard will be in and potentially relying on that knowledge instead of actually learning the material.
 
-Mastery-based order: As you mentioned, the Leitner system places flashcards in boxes with increasing numbers indicating mastery. One approach is to cycle through the boxes in order of increasing mastery, starting with the box containing the flashcards with the least mastery and moving on to the box containing the flashcards with the most mastery. This approach ensures that flashcards that have been mastered more recently are reviewed less frequently, while those that are still being learned are reviewed more frequently.
+- **Mastery-based order**: As you mentioned, the Leitner system places flashcards in boxes with increasing numbers indicating mastery. One approach is to cycle through the boxes in order of increasing mastery, starting with the box containing the flashcards with the least mastery and moving on to the box containing the flashcards with the most mastery. This approach ensures that flashcards that have been mastered more recently are reviewed less frequently, while those that are still being learned are reviewed more frequently.
 
-Adaptive order: Some implementations of the Leitner system use an adaptive approach, where the order of the boxes is determined based on the user's performance. For example, if the user consistently struggles with flashcards in a particular box, that box could be reviewed more frequently. Conversely, if the user consistently performs well on flashcards in a particular box, that box could be reviewed less frequently. This approach can help personalize the learning experience for each user and optimize the review process.
+- **Adaptive order**: Some implementations of the Leitner system use an adaptive approach, where the order of the boxes is determined based on the user's performance. For example, if the user consistently struggles with flashcards in a particular box, that box could be reviewed more frequently. Conversely, if the user consistently performs well on flashcards in a particular box, that box could be reviewed less frequently. This approach can help personalize the learning experience for each user and optimize the review process.
 
 ### Simple Implementation
 
