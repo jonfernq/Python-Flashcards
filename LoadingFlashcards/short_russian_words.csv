@@ -1,0 +1,73 @@
+Here is an example CSV file containing a deck of flashcards that tests the user on the letters of the Russian alphabet:
+
+Copy code
+front,back,mastery
+А,A,1
+Б,B,1
+В,V,1
+Г,G,1
+Д,D,1
+Е,E,1
+Ё,Yo,1
+Ж,Zh,1
+З,Z,1
+И,I,1
+Й,Y,1
+К,K,1
+Л,L,1
+М,M,1
+Н,N,1
+О,O,1
+П,P,1
+Р,R,1
+С,S,1
+Т,T,1
+У,U,1
+Ф,F,1
+Х,Kh,1
+Ц,Ts,1
+Ч,Ch,1
+Ш,Sh,1
+Щ,Shch,1
+Ъ,’’,1
+Ы,Y,1
+Ь,’,1
+Э,E,1
+Ю,Yu,1
+Я,Ya,1
+This CSV file contains 33 flashcards with the Russian letter on the front and the corresponding English language letter on the back. The initial mastery level for each flashcard is set to 1. You can use this CSV file to test the user on the letters of the Russian alphabet. To use this CSV file with the flashcard program, save it to the same directory as the program file (e.g. "flashcard_program.py") and specify the file in the flashcard_files list in the config.json file. Then, run the program using the following command:
+
+Copy code
+python flashcard_program.py
+front,back,mastery
+Собака,sobaka,dog,1
+Кот,kot,cat,1
+Дом,dom,house,1
+Книга,kniga,book,1
+Дерево,derevo,tree,1
+Ручка,ruchka,pen,1
+Стол,stol,table,1
+Окно,okno,window,1
+Деньги,dengi,money,1
+Словарь,slovar',dictionary,1
+Чашка,chashka,cup,1
+Стул,stul,chair,1
+Ножницы,nozhnitsy,scissors,1
+Телефон,telefon,telephone,1
+Компьютер,komp'yuter,computer,1
+Картина,kartina,picture,1
+Сумка,sumka,bag,1
+Пальто,pal'to,coat,1
+Тетрадь,tetrad',notebook,1
+Кошелек,koshelek,wallet,1
+Студент,student,student,1
+Учитель,uchitel',teacher,1
+Работа,rabota,work,1
+Магазин,magazin,store,1
+Город,gorod,city,1
+Парк,park,park,1
+Ресторан,restoran,restaurant,1
+Кафе,kafe,cafe,1
+Кинотеатр,kinoteatr,movie theater,1
+Банк,bank,bank,1
+Почта,pochta,post,1
