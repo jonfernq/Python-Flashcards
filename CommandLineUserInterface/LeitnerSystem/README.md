@@ -8,6 +8,10 @@ The learners try to recall the solution written on a flashcard. If they succeed,
 If they fail, they send it back to the first group. Each succeeding group has a longer period before the learner 
 is required to revisit the cards." (Source: [Wikipedia](https://en.wikipedia.org/wiki/Leitner_system))
 
+Here we present a very simple command line implementation:
+
+![leitner](https://user-images.githubusercontent.com/68504324/221069248-ab5f954d-259a-47c8-8855-f7d3a94df8d3.jpg)
+
 ### Cycling Through Flashcards
 
 There is no standard way to cycle through the boxes in the Leitner system. However, here are some common approaches:
