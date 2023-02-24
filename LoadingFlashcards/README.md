@@ -1,15 +1,19 @@
 ## Loading Flashcards 
 
-CSV spreadsheet files are the most convenient way to collect data for creation of flashcards.
+CSV spreadsheet files are the most convenient way to collect data for the initial creation of flashcards.
   
-Once one starts organizing and structuring this data, for instance into frequency of usage, 
-subject area as a thesaurus does, transforming flashcards into multiple choice questions 
-for quizzes, or tracking performance and mastery of the facts of flashcards, then CSV files
-become limiting. 
+Once one starts organizing, structuring and adding information to this raw data, however, CSV files become limiting.  
+
+For instance, flashcards for words can be structured into word frequency of usage, subject area of word as a thesaurus does.
+
+Flashcards can also be transformed into multiple choice questions for quizzes.
+
+Data is added to flashcards when tracking performance and mastery of the facts of flashcards.
+Self-rating of mastery or a quiz score, can be added to a flashcard. 
   
-A relational database allows for easy structuring of data.  
+A relational database allows for more facile structuring of data.  
   
-We start with the raw flashcard data and basic descriptive information.   
+We start with the flashcard data and basic descriptive information.   
 
 ### Flashcards, Decks, and Descriptors
 
