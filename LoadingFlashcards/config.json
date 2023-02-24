@@ -1,0 +1,12 @@
+{
+    "flashcard_files": [
+        "country_populations.csv",
+        "city_populations.csv",
+		"burmese_location_words.csv",
+        "pali_sentences.csv",
+        "short_russian_words.csv",
+        "simple_thai_words.csv",
+        "thai_location_words.csv",
+		"awl_flashcard_1.csv" 
+    ]
+}
