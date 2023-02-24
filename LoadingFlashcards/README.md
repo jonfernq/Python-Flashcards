@@ -1,5 +1,13 @@
 ## Loading Flashcards 
 
+Flashcard can be stored and loaded into an app in various ways. 
+
+Before some code exploring these different ways is presented, 
+some general ideas about flashcard data and its repurposing for different 
+learning approaches will be outlined. 
+
+### Flashcard Data-Gathering & Restructuring
+
 CSV spreadsheet files are the most convenient way to collect data for the initial creation of flashcards.
   
 Once one starts organizing, structuring and adding information to this raw data, however, CSV files become limiting.  
