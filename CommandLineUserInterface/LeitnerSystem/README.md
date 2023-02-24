@@ -24,7 +24,7 @@ There is no standard way to cycle through the boxes in the Leitner system. Howev
 
 - **Adaptive order**: Some implementations of the Leitner system use an adaptive approach, where the order of the boxes is determined based on the user's performance. For example, if the user consistently struggles with flashcards in a particular box, that box could be reviewed more frequently. Conversely, if the user consistently performs well on flashcards in a particular box, that box could be reviewed less frequently. This approach can help personalize the learning experience for each user and optimize the review process.
 
-### Simple Implementation
+### Simple CLI Implementation
 
 In this simple implementation, the first pass places flashcards in the boxes.
 After that, the program cycles through the boxes from 1 to 3 until the user quits:
