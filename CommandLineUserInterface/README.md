@@ -134,7 +134,7 @@ class FlashcardPresentation:
         print("Exiting flashcard review\nCheck log file for mastery ratings") 
 ```
 
-- [log.txt]():  Recorded mastery rating, for future processing:  
+- [log.txt](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/log.csv):  Recorded mastery rating, for future processing:  
 
 ```
 2023-03-03 04:25:16.424978	2	 front=What is the capital of France?	 back=Paris
