@@ -48,7 +48,7 @@ The CLI flashcard display class:
 
 ![mastery_ratings](https://user-images.githubusercontent.com/68504324/222575293-4880d663-9a1c-4c90-9d05-1b63e2520078.jpg)
 
-- [flashcard_logic.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/display_flashcard.py): Loads, iterates through, and collects mastery ratings for, a deck of flashcards.   
+- [flashcard_logic.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/flashcard_logic.py): Loads, iterates through, and collects mastery ratings for, a deck of flashcards.   
 
 ```python
 # flashcard_logic.py
@@ -74,7 +74,7 @@ presentation.exit()
 data.exit()     
 ```
 
-- [flashcard_data.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/flashcard_data.py):  Layer performing all data I/O. 
+- [flashcard_data.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/flashcard__data.py):  Layer performing all data I/O. 
 
 ```python
 # flashcard_data.py - 
@@ -103,7 +103,7 @@ class FlashcardData:
         self.log.close()         
 ```
 
-- [flashcard_presentation.py](): Simple user interface isolated in this class, includes prompting user for input, recording and validating input, opening, reading and writing, and closing from databases and files, sending messages to user.    
+- [flashcard_presentation.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/flashcard_presentation.py): Simple user interface isolated in this class, includes prompting user for input, recording and validating input, opening, reading and writing, and closing from databases and files, sending messages to user.    
 
 ```python
 # flashcard_presentation.py - 
@@ -132,6 +132,19 @@ class FlashcardPresentation:
                 
     def exit(self):
         print("Exiting flashcard review\nCheck log file for mastery ratings") 
+```
+
+- [log.txt]():  Recorded mastery rating, for future processing:  
+
+```
+2023-03-03 04:25:16.424978	2	 front=What is the capital of France?	 back=Paris
+2023-03-03 04:25:20.462859	1	 front=What is the largest country in the world?	 back=Russia
+2023-03-03 05:00:45.894532	3	 front=What is the capital of France?	 back=Paris
+2023-03-03 05:00:49.995731	1	 front=What is the largest country in the world?	 back=Russia
+2023-03-03 05:18:36.485844	4	 front=What is the capital of France?	 back=Paris
+2023-03-03 05:18:39.163318	1	 front=What is the largest country in the world?	 back=Russia
+2023-03-03 05:31:29.844688	3	 front=What is the capital of France?	 back=Paris
+2023-03-03 05:31:31.697439	2	 front=What is the largest country in the world?	 back=Russia
 ```
 
 
