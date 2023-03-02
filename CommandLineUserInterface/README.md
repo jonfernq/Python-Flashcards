@@ -57,7 +57,6 @@ The CLI flashcard display class:
 # three layered flashcard design: 
 # data, logic presentation 
 
-from inquirer import Text
 from flashcard_presentation import FlashcardPresentation  # Presentation layer 
 from flashcard_data import FlashcardData                  # Data layer 
 
