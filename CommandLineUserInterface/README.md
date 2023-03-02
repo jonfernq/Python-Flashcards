@@ -46,26 +46,79 @@ Then it collects the user response (a self-rating of mastery of the flashcard in
 
 The CLI flashcard display class: 
 
-![cli_flashcards](https://user-images.githubusercontent.com/68504324/220826507-665dbd92-35de-4b59-a053-773fa4160106.jpg)
+![mastery_ratings](https://user-images.githubusercontent.com/68504324/222575293-4880d663-9a1c-4c90-9d05-1b63e2520078.jpg)
 
-- [display_flashcard.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/display_flashcard.py): Displays front and back of flashcard, validates user input, and returns response, if required.  
+- [flashcard_logic.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/display_flashcard.py): Loads, iterates through, and collects mastery ratings for, a deck of flashcards.   
 
 ```python
-import inquirer
+# flashcard_logic.py
+
+# business logic or middle layer of 
+# three layered flashcard design: 
+# data, logic presentation 
+
+from inquirer import Text
+from flashcard_presentation import FlashcardPresentation  # Presentation layer 
+from flashcard_data import FlashcardData                  # Data layer 
+
+presentation = FlashcardPresentation()                    # Create a FlashcardPresentation object
+data         = FlashcardData()                            # Create a FlashcardData object
+
+for card in data.flashcards:                              # Loop through flashcards, display front and back, collect mastery ratings 
+    willcontinue = presentation.present_front(card)       # Display the front of the flashcard and prompt user for input
+    if willcontinue == 'x':                               # Exit     
+        break 
+    mastery = presentation.present_back(card)             # Display back of flashcard, prompt user to rate mastery
+    data.record_flashcard_mastery_rating(mastery, card)   
+presentation.exit() 
+data.exit()     
+```
+
+- [flashcard_data.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/flashcard_data.py):  Layer performing all data I/O. 
+
+```python
+# flashcard_data.py - 
+
+import datetime 
 
 class Flashcard:
     def __init__(self, front, back):
         self.front = front
         self.back = back
 
-class DisplayFlashcard:
-    def display_front(self, flashcard):
+class FlashcardData: 
+    def __init__(self):
+
+        self.flashcards = [
+            Flashcard(front='What is the capital of France?', back='Paris'),
+            Flashcard(front='What is the largest country in the world?', back='Russia')
+        ]     
+        
+        self.log = open('log.txt', 'a', encoding='utf-8')     # log file of mastery ratings 
+
+    def record_flashcard_mastery_rating(self, mastery, card): 
+        self.log.write(str(datetime.datetime.now()) + '\t' + str(mastery) + '\t front=' + str(card.front) + '\t back=' + str(card.back) + '\n') # write mastery rating to log
+        
+    def exit(self): 
+        self.log.close()         
+```
+
+- [flashcard_presentation.py](): Simple user interface isolated in this class, includes prompting user for input, recording and validating input, opening, reading and writing, and closing from databases and files, sending messages to user.    
+
+```python
+# flashcard_presentation.py - 
+
+import inquirer
+
+class FlashcardPresentation:
+    def present_front(self, flashcard):
         questions = [
-            inquirer.Text('input', message=flashcard.front + '\nPress enter to continue')
+            inquirer.Text('input', message=flashcard.front + '\nHit enter to continue, x to  exit')
         ]
-        inquirer.prompt(questions)
-    
-    def display_back(self, flashcard):
+        willcontinue = inquirer.prompt(questions)
+        return willcontinue
+        
+    def present_back(self, flashcard):
         while True:
             mastery_question = [
                 inquirer.Text('input', message=flashcard.front + '\n' + flashcard.back + 
@@ -76,31 +129,9 @@ class DisplayFlashcard:
                 return mastery_rating
             else:
                 print("Invalid input. Please enter an integer from 1 to 5.")
-```
-
-- [display_flashcard_test.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/display_flashcard_test.py):  Tests display_flashcard.py with example flashcards. 
-
-```python
-from inquirer import Text
-from display_flashcard import DisplayFlashcard
-from display_flashcard import Flashcard
-
-flashcards = [
-    Flashcard(front='What is the capital of France?', back='Paris'),
-    Flashcard(front='What is the largest country in the world?', back='Russia')
-]
-
-# Create a DisplayFlashcard object
-display = DisplayFlashcard()
-
-# Loop through the flashcards and display the front and back
-for card in flashcards:
-    # Display the front of the flashcard and prompt user for input
-    display.display_front(card)
-
-    # Display the back of the flashcard and prompt user to rate mastery
-    mastery = display.display_back(card)
-    print('Mastery rating:', mastery)
+                
+    def exit(self):
+        print("Exiting flashcard review\nCheck log file for mastery ratings") 
 ```
 
 
