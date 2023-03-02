@@ -23,8 +23,8 @@ In the presentation layer, complicated user interface details are encapsulated a
 The presentation layer has very limited functionality. It only:  
 
 - a. Displays the front and back of flashcards
-- b. Collects and validats user input
-- c. Passes data on to the logic layer. 
+- b. Collects and validates user input
+- c. Passes data back to logic layer. 
 
 This limited functionality is so that the app can be more easily ported to different user interfaces, e.g. CLI, React.js, PyQT, Flutter, etc...    
 
