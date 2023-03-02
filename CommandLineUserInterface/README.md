@@ -4,21 +4,21 @@ A CLI is an easy setting to test the underlying logic of an app.
 
 Here that app is a flashcard and multiple choice quiz app. 
 
-With a CLI, business logic is easily worked out without complications of user interface code.
+With a CLI user interface, business logic is easily worked out without the usual complications of user interface code.
 
-Then a user interface is added (**Web**; **Desktop**: Windows, macOS, **Linux**; Mobile: iOS, Android).  
+Then more complicated user interfaces can be added (**Web**; **Desktop**: Windows, macOS, **Linux**; Mobile: iOS, Android).  
 
 ### Python Inquirer 
 
-The Python Inquirer package provides a nice CLI for these purposes. 
+The Python Inquirer package provides a nice CLI user interface: 
 
 - [inquirer_simple.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple.py): Simple test of Python Inquirer package for command line user input. First, displays a random integer, then continues displaying a different random integer everytime the user hits enter.  
 - [inquirer_simple_2.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple_2.py): Simple test that prompts for user name, then answers 'hello'.  
 - [inquirer_simple_3.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple_3.py): Simple two part prompt. 
 
-### Flashcard Presentation
+### Presentation Layer
 
-In the presentation layer class complicated user interface details are encapsulated and hidden. 
+In the presentation layer, complicated user interface details are encapsulated and hidden. 
 
 The presentation layer has very limited functionality. It only:  
 
@@ -27,6 +27,8 @@ The presentation layer has very limited functionality. It only:
 - c. Passes data on to the logic layer. 
 
 This limited functionality is so that the app can be more easily ported to different user interfaces, e.g. CLI, React.js, PyQT, Flutter, etc...    
+
+### Logic Layer 
 
 In the logic layer, a simple iterator class iterates over a deck of flashcards calling a simple flashcard state machine for each flashcard. 
 
