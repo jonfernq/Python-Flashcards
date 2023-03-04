@@ -8,13 +8,7 @@ With a CLI user interface, business logic is easily worked out without the usual
 
 Then more complicated user interfaces can be added (**Web**; **Desktop**: Windows, macOS, **Linux**; Mobile: iOS, Android).  
 
-### Python Inquirer 
-
-The Python Inquirer package provides a nice CLI user interface: 
-
-- [inquirer_simple.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple.py): Simple test of Python Inquirer package for command line user input. First, displays a random integer, then continues displaying a different random integer everytime the user hits enter.  
-- [inquirer_simple_2.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple_2.py): Simple test that prompts for user name, then answers 'hello'.  
-- [inquirer_simple_3.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/inquirer_simple_3.py): Simple two part prompt. 
+The [Python Inquirer package](https://github.com/jonfernq/Python-Utilities/tree/main/PythonInquirer) provides a nice CLI user interface. 
 
 ### Presentation Layer
 
