@@ -1,6 +1,10 @@
 ## Loading Flashcards 
 
-Flashcard can be stored and loaded into an app in various ways. 
+Flashcards can be stored and loaded into an app in various ways:
+
+- Automatically loaded from CSV files in a sub-directory each time the app starts.
+- Manually loaded either by app creator or user from CSV files into a SQLite database. 
+- Automatically loaded from a list in a config file. 
 
 Before some code exploring these different ways is presented, 
 some general ideas about flashcard data and its repurposing for different 
@@ -9,19 +13,19 @@ learning approaches will be outlined.
 ### Flashcard Data-Gathering & Restructuring
 
 CSV spreadsheet files are the most convenient way to collect data for the initial creation of flashcards.
-  
-Once one starts organizing, structuring and adding information to this raw data, however, CSV files become limiting.  
 
-For instance, flashcards for words can be structured into word frequency of usage, subject area of word as a thesaurus does.
+And, it is sometimes best to keep it simple, putting a single deck of around 20 flashcards to be studied at a single time in a CSV file for instance. The name of the deck is simply the name of the CSV file, and the fields of the CSV file could be as simple as two fields: 'front' and 'back', or 'question' and 'answer'. 
+  
+Once one starts organizing, structuring and adding supplorting information, however, CSV files become limiting. A relational database allows this extra flashcard metadata to be added in additional database tables without modifying the flashcard table itself. 
+
+There are many ways that flashcards can be structured, flashcards for words, for instance, can be structured into word frequency of usage, subject area of word as a thesaurus does.
 
 Flashcards can also be transformed into multiple choice questions for quizzes.
 
-Data is added to flashcards when tracking performance and mastery of the facts of flashcards.
-Self-rating of mastery or a quiz score, can be added to a flashcard. 
+Data is also added to flashcards when tracking performance and mastery of the facts of flashcards.
+For instance, self-rating of mastery or a quiz score, can be added to a flashcard. 
   
-A relational database allows for more facile structuring of data.  
-  
-We start with the flashcard data and basic descriptive information.   
+A relational database allows for more facile structuring of data.  Here, we start with the flashcard data and basic descriptive information.   
 
 ### Flashcards, Decks, and Descriptors
 
@@ -40,7 +44,7 @@ A single flashcard is one card in a deck of flashcards, for example animal flash
   
 ### Different Approaches to Loading Flashcards
 
-I have always preferred having all the CSV flashcard files in a sub-directory 
+One approach is to have all the CSV flashcard files in a sub-directory 
 loaded when the flashcard app starts.
 
 Then as a learner views the cards and self-rates their mastery or takes a quiz 
