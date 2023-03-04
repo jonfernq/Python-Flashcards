@@ -39,9 +39,13 @@ Then the user response (a self-rating of mastery of the flashcard information) i
 
 ### CLI User Interface
 
-The CLI flashcard display class: 
+Here is the output and code for a simple flashcard app with a CLI user interface/presentation layer: 
+
+Output: 
 
 ![mastery_ratings](https://user-images.githubusercontent.com/68504324/222575293-4880d663-9a1c-4c90-9d05-1b63e2520078.jpg)
+
+#### Business Logic Layer: 
 
 - [flashcard_logic.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/flashcard_logic.py): Loads, iterates through, and collects mastery ratings for, a deck of flashcards.   
 
@@ -67,6 +71,7 @@ for card in data.flashcards:                              # Loop through flashca
 presentation.exit() 
 data.exit()     
 ```
+#### Data Layer: 
 
 - [flashcard_data.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/flashcard__data.py):  Layer performing all data I/O. 
 
@@ -96,6 +101,8 @@ class FlashcardData:
     def exit(self): 
         self.log.close()         
 ```
+
+#### Presentation/User-Interface Layer 
 
 - [flashcard_presentation.py](https://github.com/jonfernq/Python-Flashcards/blob/main/CommandLineUserInterface/flashcard_presentation.py): Simple user interface isolated in this class, includes prompting user for input, recording and validating input, opening, reading and writing, and closing from databases and files, sending messages to user.    
 
