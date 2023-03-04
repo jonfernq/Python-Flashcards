@@ -1,6 +1,6 @@
 ##  Python-Flashcards
 
-Variations of flashcards using Python.
+Variations of flashcards using Python..
 
 ### Command Line Interface (CLI) 
 
