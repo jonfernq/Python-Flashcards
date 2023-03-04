@@ -4,11 +4,13 @@ A CLI is an easy setting to test the underlying logic of an app.
 
 Here that app is a flashcard and multiple choice quiz app. 
 
-With a CLI user interface, business logic is easily worked out without the usual complications of user interface code.
+A [three-tier](https://en.wikipedia.org/wiki/Multitier_architecture#Three-tier_architecture) or three-layered architecture of 1. data/database, 2. business logic, and 3. presentation/user-interface, allows for separation of concerns and easier change to layers.  
 
-Then more complicated user interfaces can be added (**Web**; **Desktop**: Windows, macOS, **Linux**; Mobile: iOS, Android).  
+With a CLI user interface for instance, business logic is easily worked out without the usual complications of user interface code.
 
-The [Python Inquirer package](https://github.com/jonfernq/Python-Utilities/tree/main/PythonInquirer) provides a nice CLI user interface. 
+More complicated user interfaces can be added separately from business logic (**Web**; **Desktop**: Windows, macOS, **Linux**; Mobile: iOS, Android).  
+
+The [Python Inquirer package](https://github.com/jonfernq/Python-Utilities/tree/main/PythonInquirer) provides a nice CLI user interface to work with. 
 
 ### Presentation Layer
 
@@ -18,19 +20,17 @@ The presentation layer has very limited functionality. It only:
 
 - a. Displays the front and back of flashcards
 - b. Collects and validates user input
-- c. Passes data back to logic layer. 
+- c. Passes data back to business logic layer. 
 
-This limited functionality is so that the app can be more easily ported to different user interfaces, e.g. CLI, React.js, PyQT, Flutter, etc...    
+This limited functionality allows the app can be more easily ported to different user interfaces, e.g. CLI, React.js, PyQT, Flutter, etc...    
 
-### Logic Layer 
+### Business Logic Layer 
 
-In the logic layer, a simple iterator class iterates over a deck of flashcards calling a simple flashcard state machine for each flashcard. 
+In the business logic layer, a simple iterator class iterates over a deck of flashcards, calling a simple flashcard state machine for each succesive flashcard. 
 
-The flashcard state machine class toggles between flashcard front and back.
+Each flashcard state machine class toggles between flashcard front and back calling the presentation class to present each side of the flashcard.
 
-It calls the presentation class to present each side of the flashcard.
-
-Then it collects the user response (a self-rating of mastery of the flashcard information).  
+Then the user response (a self-rating of mastery of the flashcard information) is sent back from the presentation layer to business logic layer and stored in the data layer.   
 
 ![diagram400](https://user-images.githubusercontent.com/68504324/221042530-fc380752-d65b-4bf5-a5a4-5fe037700d26.jpg)
 
