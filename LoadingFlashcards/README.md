@@ -1,6 +1,22 @@
 ## Loading Flashcards 
 
-Flashcards can be stored and loaded into an app in various ways:
+Flashcards can be stored and loaded into an app in various ways.
+
+In most flashcard apps (e.g. Anki) one opens a file dialogue and loads a deck of flashcards directly from a file.
+
+However, manual loading of each flashcard deck from a file each time 
+is not suitable for a more wholistic approach to learning.
+
+For learning all the words of the Academic Word List (AWL)
+over multiple decks and multiple sessions, pre-loading many related decks makes more sense. 
+
+Pre-loading decks once and for all allows for reorganization of decks based on mastery.
+
+Flashcards can be presented as a prioritized list for learning.
+Flashcards with a low-level of mastery are given a high priority and high-level of mastery
+are given a low priority. 
+
+Here are some ways to pre-load decks: 
 
 - Automatically loaded from CSV files in a sub-directory each time the app starts.
 - Manually loaded either by app creator or user from CSV files into a SQLite database. 
