@@ -18,9 +18,10 @@ are given a low priority.
 
 Here are some ways to pre-load decks: 
 
-- Automatically loaded from CSV files in a sub-directory each time the app starts.
+- Automatically loaded from CSV files from sub-directories each time the app starts.
 - Manually loaded either by app creator or user from CSV files into a SQLite database. 
 - Automatically loaded from a list in a config file. 
+- And so on... 
 
 Before some code exploring these different ways is presented, 
 some general ideas about flashcard data and its repurposing for different 
@@ -48,7 +49,9 @@ A relational database allows for more facile structuring of data.  Here, we star
 In its most elemental form, flashcards are basically lists of points on a given topic to learn.
 A list item basically looks like this:
 
-HEAD - DESCRIPTION
+FRONT    - BACK
+QUESTION - ANSWER 
+HEAD     - DESCRIPTION
 
 In a word list of vocabulary a list item looks like this:  
 
