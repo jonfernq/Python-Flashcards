@@ -1,26 +1,27 @@
 ## Command Line User Interface (CLI)
 
-A CLI is an easy setting to test the underlying logic of an app.
-
+A Command Line Interface (CLI) is an easy setting to test the underlying logic of an app.
 Here that app is a flashcard and multiple choice quiz app. 
+
+I use the [ConEmu terminal emulator](https://en.wikipedia.org/wiki/ConEmu) for Windows which displays unicode characters better than 
+the command line terminals that come with Windows. 
 
 A [three-tier](https://en.wikipedia.org/wiki/Multitier_architecture#Three-tier_architecture) or three-layered architecture of 1. data/database, 2. business logic, and 3. presentation/user-interface, allows for separation of concerns and easier change to layers.  
 
-With a CLI user interface for instance, business logic is easily worked out without the usual complications of user interface code.
+Using a simple CLI user interface for the presentation layer, business logic is easily worked out without the usual complications of user interface code.
 
-More complicated user interfaces can be added separately from business logic (**Web**; **Desktop**: Windows, macOS, **Linux**; Mobile: iOS, Android).  
+A variety of more complicated user interfaces can be added after business logic has been finalized: **Web**; **Desktop**: Windows, macOS, **Linux**; Mobile: iOS, Android.  
 
-The [Python Inquirer package](https://github.com/jonfernq/Python-Utilities/tree/main/PythonInquirer) provides a nice CLI user interface to work with. 
+I find the [Python Inquirer package](https://github.com/jonfernq/Python-Utilities/tree/main/PythonInquirer) provides a nice CLI user interface to work with, displaying menus and checkboxes for multiple choice questions. 
 
 ### Presentation Layer
 
-In the presentation layer, complicated user interface details are encapsulated and hidden. 
+The presentation layer encapsulates and hides complicated user interface details
+with very limited functionality:  
 
-The presentation layer has very limited functionality. It only:  
-
-- a. Displays the front and back of flashcards
-- b. Collects and validates user input
-- c. Passes data back to business logic layer. 
+- a. Display the front and back of flashcards
+- b. Collect and validates user input
+- c. Pass data back to business logic layer. 
 
 This limited functionality allows the app can be more easily ported to different user interfaces, e.g. CLI, React.js, PyQT, Flutter, etc...    
 
